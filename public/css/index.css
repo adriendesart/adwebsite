@@ -1,0 +1,24 @@
+body {
+  background: #ffffff repeat-y;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 0;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+/*# sourceMappingURL=index.css.map */

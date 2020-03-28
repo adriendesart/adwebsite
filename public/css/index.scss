@@ -1,0 +1,18 @@
+body{
+    background: #ffffff repeat-y;
+    // background-image: url(./../img/woodboard.jpg);
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 0;
+}
+#root{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
