@@ -1,11 +1,11 @@
 import React, { Component, Fragment } from 'react';
-import './../css/navbar.css'
+import './../css/navbar.css';
 import ADBrand from './../img/ADbrand.svg';
 import Male from './../img/male.svg';
-import HydraulicEngeneering from './../img/hydraulicingeneering.svg';
+import LightBulb from './../img/lightbulb.svg';
 import Diver from './../img/diver.svg';
 import Fish from './../img/fish.svg';
-import Picture from './../img/video.svg'
+import Picture from './../img/video.svg';
 // import FRFLAG from './../img/Flag_of_France.svg';
 // import ENFLAG from './../img/Flag_of_the_United_Kingdom.svg';
 
@@ -40,7 +40,7 @@ export default class Navbar extends Component{
             <nav>
                 <div>
                     <a href="#parallax-intro" className={activedPart === 1 && "actived"}>
-                        <span>{this.props.language==="en"?"Home":"Accueil"}</span>
+                        <span>{this.props.language==="en"?"Welcome":"Bienvenu"}</span>
                         <img src={ADBrand} alt="AD logo"/>
                     </a>
                 </div>
@@ -51,9 +51,9 @@ export default class Navbar extends Component{
                     </a>
                 </div>
                 <div>
-                    <a href="#bla" className={activedPart === 3 && "actived"}>
-                        <span>{this.props.language==="en"?"Engineering":"Génie hydraulique"}</span>
-                        <img src={HydraulicEngeneering} alt="Hydaulic engineering"/>
+                    <a href="#parallax-mindbox" className={activedPart === 3 && "actived"}>
+                        <span>{this.props.language==="en"?"Mind box":"Boite à idée"}</span>
+                        <img src={LightBulb} alt="Mind box"/>
                     </a>
                 </div>
                 <div>

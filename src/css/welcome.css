@@ -58,8 +58,8 @@
           animation-iteration-count: infinite;
 }
 
-#parallax-presentation {
-  background-image: url(./../img/DSC_0114.JPG);
+#parallax-mindbox {
+  background-image: url(./../img/milkyway.jpg);
 }
 
 .parallax {
@@ -102,14 +102,14 @@
 }
 
 #presentation .block {
-  height: 100vh;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
@@ -117,14 +117,63 @@
           align-items: center;
 }
 
-#presentation .block img {
+#presentation .block #profil-picture {
+  max-width: 33vw;
+  z-index: 10;
   border-radius: 50%;
 }
 
-#presentation .block blockquote {
+#presentation .block div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 80%;
   color: white;
-  max-width: 33%;
-  text-align: justify;
+  text-align: center;
+}
+
+#presentation .block div blockquote {
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+#presentation .block div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5rem;
+  min-width: 33%;
+  text-decoration: none;
+}
+
+#presentation .block div a img {
+  border-radius: 0;
+  width: 3rem;
+}
+
+#presentation .block div a p {
+  margin: 0;
+  color: white;
 }
 
 #presentation::before {
@@ -135,18 +184,6 @@
   position: absolute;
   -webkit-transform: skew(0deg, -2deg) translateY(0px);
           transform: skew(0deg, -2deg) translateY(0px);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
-#presentation::after {
-  content: "";
-  width: 100%;
-  height: 50px;
-  background: black;
-  position: absolute;
-  -webkit-transform: skew(0deg, 2deg) translateY(-50px);
-          transform: skew(0deg, 2deg) translateY(-50px);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
 }

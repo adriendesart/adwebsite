@@ -34,8 +34,8 @@
         }
     }
 }
-#parallax-presentation{
-    background-image: url(./../img/DSC_0114.JPG);
+#parallax-mindbox{
+    background-image: url(./../img/milkyway.jpg);
 }
 .parallax{
     margin: 0;
@@ -65,18 +65,46 @@
     padding: 0.2rem;
   }
   .block{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: space-around;
     align-items: center;
-    img{
+    #profil-picture{
+      max-width: 33vw;
+      z-index: 10;
       border-radius: 50%;
     }
-    blockquote{
+    div{
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 80%;
       color: white;
-      max-width: 33%;
-      text-align: justify;
+      text-align: center;
+      blockquote{
+        margin: 0;
+        padding: 0;
+        color: white;
+      }
+      a{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        height: 5rem;
+        min-width: 33%;
+        text-decoration: none;
+        img{
+          border-radius: 0;
+          width: 3rem;
+        }
+        p{
+          margin: 0;
+          color: white;
+        }
+      }
     }
   }
 }
@@ -87,15 +115,6 @@
   background: black;
   position: absolute;
   transform: skew(0deg, -2deg) translateY(0px);
-  transform-origin: 0 0;
-}
-#presentation::after{
-  content: "";
-  width: 100%;
-  height: 50px;
-  background: black;
-  position: absolute;
-  transform: skew(0deg, 2deg) translateY(-50px);;
   transform-origin: 0 0;
 }
 
