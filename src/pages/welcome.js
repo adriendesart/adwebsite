@@ -5,11 +5,12 @@ import ArrowDown from './../img/arrow-down.svg';
 import PortraitAD from './../img/PortraitAD.jpg';
 import Navbar from '../components/navbar';
 import SocialLink from '../components/sociallink';
-import Linkedin from './../img/linkedin.svg'
-import Instagram from './../img/instagram.svg'
-import GitHub from './../img/github-square.svg'
-import Codepen from './../img/codepen.svg'
-import Youtube from './../img/youtube-square.svg'
+import Linkedin from './../img/linkedin.svg';
+import Instagram from './../img/instagram.svg';
+import GitHub from './../img/github-square.svg';
+import Codepen from './../img/codepen.svg';
+import Youtube from './../img/youtube-square.svg';
+import Gear from './../img/gear.svg';
 
 
 export default class Welcome extends Component{
@@ -85,7 +86,7 @@ export default class Welcome extends Component{
                     
                 </section>
                 <section id="mindbox-presentation">
-
+                    <img src={Gear} alt="gear" id="gear"/>
                 </section>
             </Fragment>
         )

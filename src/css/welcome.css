@@ -202,8 +202,31 @@
 #mindbox-presentation {
   position: relative;
   background-color: black;
-  padding-left: 2.6rem;
+  background-image: url(./../img/profile-face.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#mindbox-presentation #gear {
+  width: 20vw;
+  min-width: 200px;
+  position: absolute;
+  top: 1rem;
+  -webkit-animation: rotating 10s linear infinite;
+          animation: rotating 10s linear infinite;
 }
 
 @-webkit-keyframes hvr-wobble-vertical {
@@ -257,6 +280,28 @@
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotating {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=welcome.css.map */

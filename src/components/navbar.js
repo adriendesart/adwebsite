@@ -19,22 +19,22 @@ export default class Navbar extends Component{
 
         let activedPart;
         let screenHeight = this.props.screenHeight;
-        if(-this.props.scrollPos<= (screenHeight*0.5)){
+        if(-this.props.scrollPos<= (screenHeight*0.5) && this.props.deviceType !== "Mobile"){
             activedPart = 1;
         }
-        else if(screenHeight*0.5 <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*1.5)){
+        else if(screenHeight*0.5 <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*1.5) && this.props.deviceType !== "Mobile"){
             activedPart = 2;
         }
-        else if((screenHeight*1.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*2.5)){
+        else if((screenHeight*1.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*2.5) && this.props.deviceType !== "Mobile"){
             activedPart = 3;
         }
-        else if((screenHeight*2.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*3.5)){
+        else if((screenHeight*2.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*3.5) && this.props.deviceType !== "Mobile"){
             activedPart = 4;
         }
-        else if((screenHeight*3.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*4.5)){
+        else if((screenHeight*3.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*4.5) && this.props.deviceType !== "Mobile"){
             activedPart = 5;
         }
-        else if((screenHeight*4.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*5.5)){
+        else if((screenHeight*4.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*5.5) && this.props.deviceType !== "Mobile"){
             activedPart = 6;
         }
 
