@@ -75,8 +75,17 @@ export default class Welcome extends Component{
                         </div>
                     </div>
                 </section>
-                <section className="parallax" id="parallax-mindbox">
+                <section className="parallax" id="diving-presentation">
                     
+                </section>
+                <section id="fishing-presentation">
+
+                </section>
+                <section className="parallax" id="pictures-presentation">
+                    
+                </section>
+                <section id="mindbox-presentation">
+
                 </section>
             </Fragment>
         )

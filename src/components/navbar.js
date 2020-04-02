@@ -34,6 +34,9 @@ export default class Navbar extends Component{
         else if((screenHeight*3.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*4.5)){
             activedPart = 5;
         }
+        else if((screenHeight*4.5) <= -this.props.scrollPos && -this.props.scrollPos<= (screenHeight*5.5)){
+            activedPart = 6;
+        }
 
         return(
             <Fragment>
@@ -51,27 +54,27 @@ export default class Navbar extends Component{
                     </a>
                 </div>
                 <div>
-                    <a href="#parallax-mindbox" className={activedPart === 3 && "actived"}>
-                        <span>{this.props.language==="en"?"Mind box":"Boite à idée"}</span>
-                        <img src={LightBulb} alt="Mind box"/>
-                    </a>
-                </div>
-                <div>
-                    <a href="#bla" className={activedPart === 4 && "actived"}>
+                    <a href="#diving-presentation" className={activedPart === 3 && "actived"}>
                         <span>{this.props.language==="en"?"Diving":"Plongée"}</span>
                         <img src={Diver} alt="Diving blog"/>
                     </a>
                 </div>
                 <div>
-                    <a href="#bla" className={activedPart === 5 && "actived"}>
+                    <a href="#fishing-presentation" className={activedPart === 4 && "actived"}>
                         <span>{this.props.language==="en"?"Fishing":"Pêche"}</span>
                         <img src={Fish} alt="Fishing blog"/>
                     </a>
                 </div>
                 <div>
-                    <a href="#bla" className={activedPart === 6 && "actived"}>
+                    <a href="#pictures-presentation" className={activedPart === 5 && "actived"}>
                         <span>{this.props.language==="en"?"Pictures":"Photo"}</span>
                         <img src={Picture} alt="portfolio"/>
+                    </a>
+                </div>
+                <div>
+                    <a href="#mindbox-presentation" className={activedPart === 6 && "actived"}>
+                        <span>{this.props.language==="en"?"Mind box":"Boite à idée"}</span>
+                        <img src={LightBulb} alt="Mind box"/>
                     </a>
                 </div>
             </nav>

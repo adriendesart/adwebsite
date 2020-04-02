@@ -1,3 +1,17 @@
+.parallax{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height:100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
 #parallax-intro{
     background-image: url(./../img/DSC_0129.JPG);
     #logo-brand{
@@ -33,23 +47,6 @@
             animation-iteration-count: infinite;
         }
     }
-}
-#parallax-mindbox{
-    background-image: url(./../img/milkyway.jpg);
-}
-.parallax{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height:100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    align-items: center;
 }
 #presentation{
   position: relative;
@@ -116,6 +113,24 @@
   position: absolute;
   transform: skew(0deg, -2deg) translateY(0px);
   transform-origin: 0 0;
+}
+#diving-presentation{
+  background-image: url(./../img/DSC_0114.JPG);
+}
+#fishing-presentation{
+  position: relative;
+  background-color: black;
+  padding-left: 2.6rem;
+  height: 100vh;
+}
+#pictures-presentation{
+  background-image: url(./../img/DSC_0170.JPG);
+}
+#mindbox-presentation{
+  position: relative;
+  background-color: black;
+  padding-left: 2.6rem;
+  height: 100vh;
 }
 
 @keyframes hvr-wobble-vertical {

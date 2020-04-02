@@ -1,3 +1,26 @@
+.parallax {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #parallax-intro {
   background-image: url(./../img/DSC_0129.JPG);
 }
@@ -56,33 +79,6 @@
           animation-timing-function: ease-in-out;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-}
-
-#parallax-mindbox {
-  background-image: url(./../img/milkyway.jpg);
-}
-
-.parallax {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100vh;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #presentation {
@@ -186,6 +182,28 @@
           transform: skew(0deg, -2deg) translateY(0px);
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
+}
+
+#diving-presentation {
+  background-image: url(./../img/DSC_0114.JPG);
+}
+
+#fishing-presentation {
+  position: relative;
+  background-color: black;
+  padding-left: 2.6rem;
+  height: 100vh;
+}
+
+#pictures-presentation {
+  background-image: url(./../img/DSC_0170.JPG);
+}
+
+#mindbox-presentation {
+  position: relative;
+  background-color: black;
+  padding-left: 2.6rem;
+  height: 100vh;
 }
 
 @-webkit-keyframes hvr-wobble-vertical {
