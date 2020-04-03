@@ -84,7 +84,6 @@
 #presentation {
   position: relative;
   background-color: black;
-  padding-left: 2.6rem;
 }
 
 #presentation #copyrightAD {
@@ -135,6 +134,7 @@
   max-width: 80%;
   color: white;
   text-align: center;
+  padding-left: 2.6rem;
 }
 
 #presentation .block div blockquote {

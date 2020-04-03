@@ -7,7 +7,6 @@ import {
 import {getDeviceTypeInfo} from './utils/responsive';
 import WelcomePage from './pages/welcome';
 import NotFound from './pages/error404';
-import MindBox from './pages/mindbox';
 
 const { deviceType, deviceOrientation, screenWidth, screenHeight } = getDeviceTypeInfo();
 
@@ -49,14 +48,6 @@ export default class App extends Component {
                         <WelcomePage
                             scrollPos={this.state.scrollPos}
                             screenHeight={this.state.screenHeight}
-                            language={this.state.language}
-                            setLanguage={this.setLanguage}
-                            deviceType={this.state.deviceType}
-                            deviceOrientation={this.state.deviceOrientation}
-                        />
-                    </Route>
-                    <Route path="/mindbox">
-                        <MindBox
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}

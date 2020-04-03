@@ -51,7 +51,6 @@
 #presentation{
   position: relative;
   background-color: black;
-  padding-left: 2.6rem;
   #copyrightAD{
     position: fixed;
     bottom: 0;
@@ -80,6 +79,7 @@
       max-width: 80%;
       color: white;
       text-align: center;
+      padding-left: 2.6rem;
       blockquote{
         margin: 0;
         padding: 0;
