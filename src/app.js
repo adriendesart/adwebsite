@@ -47,7 +47,6 @@ export default class App extends Component {
                     <Route exact path="/">
                         <WelcomePage
                             scrollPos={this.state.scrollPos}
-                            screenHeight={this.state.screenHeight}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
