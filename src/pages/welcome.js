@@ -10,6 +10,12 @@ import ArrowDown from './../img/arrow-down.svg';
 import PortraitAD from './../img/PortraitAD.jpg';
 import IntroBackground from '../img/DSC_0129.JPG';
 import BlogBackground from '../img/DSC_0114.JPG';
+import SectionCard from '../components/sectioncard';
+import FishingV from '../img/photo-pêche.jpg';
+import FishingH from '../img/pêchehorjpg.jpg'
+import Diving from '../img/diving.jpg';
+import Picture from '../img/DSC_0151.JPG';
+import Webdev from '../img/codingscreen.jpg';
 
 
 export default class Welcome extends Component{
@@ -100,7 +106,7 @@ export default class Welcome extends Component{
                 bottom: this.props.deviceType !== "Mobile" &&"0",
                 top:this.props.deviceType === "Mobile" &&"0",
                 right: "0",
-                zIndex: "10",
+                zIndex: "1",
                 color: "white",
                 padding: this.props.deviceType !== "Mobile" && "0.2rem 2rem",
                 width: "100%",
@@ -128,7 +134,14 @@ export default class Welcome extends Component{
                 padding: "0 1rem",
                 color: "white",
                 textAlign: "center",
-            }
+            },
+            blogDiv :{
+                display: "flex",
+                flexFlow: (this.props.deviceType!=="Mobile"?"row":"column")+" nowrap",
+                justifyContent: "space-around",
+                alignItems: "center",
+                margin : "0 2.6rem",
+            },
         }
         let wobble = `@keyframes hvr-wobble-vertical {
                 16.65% {
@@ -167,13 +180,13 @@ export default class Welcome extends Component{
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
                 />
-                <Parallax background={IntroBackground} id="intro">
+                <Parallax background={IntroBackground} id="intro" orientation="column">
                     <span style={styles.navigationPoint} id="navPoint1"/>
                     <div style={styles.backBrand}>
                         <img src={ADBrand} alt="AD logo" style={styles.logoBrand}/>
                     </div>
                     <button disabled style={styles.arrowBtn}>
-                        {this.props.language==="en"?"Welcome":"Bienvenu"}
+                        {this.props.language==="en"?"Welcome":"Bienvenue"}
                         <style children={wobble} />
                         <img src={ArrowDown} alt="scroll-down" style={styles.arrow}/>
                     </button>
@@ -188,8 +201,44 @@ export default class Welcome extends Component{
                         </blockquote>
                     </div>
                 </section>
-                <Parallax background={BlogBackground} id="blogs">
+                <Parallax background={BlogBackground} id="blogs" orientation="column">
                     <span style={styles.navigationPoint} id="navPoint3"/>
+                    <div style={styles.blogDiv}>
+                        <SectionCard
+                           language={this.props.language}
+                           deviceType={this.props.deviceType}
+                           deviceOrientation={this.props.deviceOrientation}
+                           title={{fr : "Pêche", en : "Fishing"}}
+                           description={{fr : "En construction", en : "Wait for it"}}
+                           background={FishingV}
+                        />
+                        <SectionCard
+                           language={this.props.language}
+                           deviceType={this.props.deviceType}
+                           deviceOrientation={this.props.deviceOrientation}
+                           title={{fr : "Plongée", en : "Diving"}}
+                           description={{fr : "En construction", en : "Wait for it"}}
+                           background={Diving}
+                        />
+                    </div>
+                    <div style={styles.blogDiv}>
+                        <SectionCard
+                            language={this.props.language}
+                            deviceType={this.props.deviceType}
+                            deviceOrientation={this.props.deviceOrientation}
+                            title={{fr : "Code", en : "Web Dev"}}
+                            description={{fr : "En construction", en : "Wait for it"}}
+                            background={Webdev}
+                        />
+                        <SectionCard
+                            language={this.props.language}
+                            deviceType={this.props.deviceType}
+                            deviceOrientation={this.props.deviceOrientation}
+                            title={{fr : "Portfolio", en : "Gallery"}}
+                            description={{fr : "En construction", en : "Wait for it"}}
+                            background={Picture}
+                        />
+                    </div>
                 </Parallax>
             </Fragment>
         )

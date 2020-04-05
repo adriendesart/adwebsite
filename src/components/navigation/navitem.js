@@ -52,7 +52,7 @@ export default class NavItem extends Component{
                 width: "2rem",
                 height: "2rem",
                 padding: "0.2rem",
-                border: this.state.visible?"1px solid rgb(145, 231, 16)":"1px solid white",
+                border: this.props.deviceType !== "Mobile" && this.state.visible?"1px solid rgb(145, 231, 16)":"1px solid white",
                 borderRadius: "50%",
             },
         }

@@ -9,14 +9,14 @@ export default class Parallax extends Component{
                 margin: "0",
                 padding: "0",
                 width: "100%",
-                height:"100vh",
+                minHeight:"100vh",
                 backgroundImage: `url(${this.props.background})`,
                 backgroundAttachment: "fixed",
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
                 display: "flex",
-                flexFlow: "column nowrap",
+                flexFlow:  this.props.orientation + " nowrap",
                 justifyContent: "space-around",
                 alignItems: "center",
                 position: "relative",
@@ -31,6 +31,7 @@ export default class Parallax extends Component{
 }
 
 Parallax.propTypes = {
-    background : PropTypes.string,
+    background : PropTypes.string.isRequired,
+    orientation : PropTypes.string.isRequired,
     id : PropTypes.string,
 }

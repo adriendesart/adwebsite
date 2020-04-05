@@ -33,7 +33,7 @@ export default class Navbar extends Component{
                 position: "fixed",
                 top: "0",
                 left: "0",
-                zIndex: "10",
+                zIndex: "1",
             },
             langTab : {
                 position : "relative",
