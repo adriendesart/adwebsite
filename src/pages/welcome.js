@@ -12,10 +12,10 @@ import IntroBackground from '../img/DSC_0129.JPG';
 import BlogBackground from '../img/DSC_0114.JPG';
 import SectionCard from '../components/sectioncard';
 import FishingV from '../img/photo-pêche.jpg';
-import FishingH from '../img/pêchehorjpg.jpg'
 import Diving from '../img/diving.jpg';
 import Picture from '../img/DSC_0151.JPG';
 import Webdev from '../img/codingscreen.jpg';
+import Footer from '../components/navigation/footer';
 
 
 export default class Welcome extends Component{
@@ -240,6 +240,7 @@ export default class Welcome extends Component{
                         />
                     </div>
                 </Parallax>
+                <Footer/>
             </Fragment>
         )
     }

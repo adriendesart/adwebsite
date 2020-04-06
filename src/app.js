@@ -5,14 +5,16 @@ import {
     Route
 } from "react-router-dom";
 import {getDeviceTypeInfo} from './utils/responsive';
+import {getBrowserLanguage} from './utils/browserLang';
 import WelcomePage from './pages/welcome';
 import NotFound from './pages/error404';
 
 const { deviceType, deviceOrientation, screenWidth, screenHeight } = getDeviceTypeInfo();
 
 export default class App extends Component {
+    language = getBrowserLanguage()
     state = {
-        language : "fr",
+        language : this.language,
         deviceType,
         deviceOrientation,
         screenWidth, 
