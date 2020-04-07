@@ -205,6 +205,7 @@ export default class Welcome extends Component{
                            title={{fr : "Pêche", en : "Fishing"}}
                            description={{fr : "En construction", en : "Wait for it"}}
                            background={FishingV}
+                           redirect="fishing"
                         />
                         <SectionCard
                            language={this.props.language}
@@ -213,6 +214,7 @@ export default class Welcome extends Component{
                            title={{fr : "Plongée", en : "Diving"}}
                            description={{fr : "En construction", en : "Wait for it"}}
                            background={Diving}
+                           redirect="diving"
                         />
                     </div>
                     <div style={styles.blogDiv}>
@@ -223,6 +225,7 @@ export default class Welcome extends Component{
                             title={{fr : "Code", en : "Web Dev"}}
                             description={{fr : "En construction", en : "Wait for it"}}
                             background={Webdev}
+                            redirect="web"
                         />
                         <SectionCard
                             language={this.props.language}
@@ -231,6 +234,7 @@ export default class Welcome extends Component{
                             title={{fr : "Portfolio", en : "Gallery"}}
                             description={{fr : "En construction", en : "Wait for it"}}
                             background={Picture}
+                            redirect="pictures"
                         />
                     </div>
                 </Parallax>

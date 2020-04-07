@@ -95,6 +95,7 @@ export default class Navbar extends Component{
                     language={this.props.language}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
+                    redirect = {true}
                 />
             )
         }

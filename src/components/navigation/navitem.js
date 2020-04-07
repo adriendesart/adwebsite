@@ -1,11 +1,13 @@
 import React, { Component} from 'react';
 import PropTypes from 'prop-types';
+import {Redirect} from 'react-router-dom';
 import {isVisible} from '../../utils/displayed';
 
 export default class NavItem extends Component{
     state = {
         visible : false,
         over : false,
+        clicked : false,
     }
     componentDidMount() {
         window.addEventListener("scroll", this.handleScroll)
@@ -24,6 +26,13 @@ export default class NavItem extends Component{
         this.setState({
             over: !this.state.over,
         })
+    }
+    handleClick=()=>{
+        if(this.props.redirect){
+            this.setState({
+                clicked : true,
+            })
+        }
     }
     render(){
         //css :
@@ -58,9 +67,11 @@ export default class NavItem extends Component{
                 borderRadius: "50%",
             },
         }
-
+        if(this.state.clicked){
+            return <Redirect push to={`/`}/>
+        }
         return(
-            <div style={styles.navItem}>
+            <div style={styles.navItem} onClick={this.handleClick}>
                 <a style={styles.navLink} href={this.props.anchor && "#" + this.props.anchor} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}>
                     <span style={styles.subject}>{this.props.language==="en"?this.props.name.en:this.props.name.fr}</span>
                     <img style={styles.icon} src={this.props.icon.src} alt={this.props.icon.alt}/>
@@ -77,4 +88,5 @@ NavItem.propTypes = {
     language : PropTypes.string,
     deviceType : PropTypes.string,
     deviceOrientation : PropTypes.string,
+    redirect : PropTypes.bool,
 }
