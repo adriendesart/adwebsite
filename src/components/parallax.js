@@ -30,6 +30,10 @@ export default class Parallax extends Component{
     }
 }
 
+Parallax.defaultProps={
+    orientation: "column",
+}
+
 Parallax.propTypes = {
     background : PropTypes.string.isRequired,
     orientation : PropTypes.string.isRequired,

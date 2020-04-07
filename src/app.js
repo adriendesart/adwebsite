@@ -8,6 +8,11 @@ import {getDeviceTypeInfo} from './utils/responsive';
 import {getBrowserLanguage} from './utils/browserLang';
 import WelcomePage from './pages/welcome';
 import NotFound from './pages/error404';
+import ProDiveCalculator from './pages/divecalculator';
+import PicturesPage from './pages/pictures';
+import FishingPage from './pages/fishing';
+import DivingPage from './pages/diving';
+import WebPage from './pages/web';
 
 const { deviceType, deviceOrientation, screenWidth, screenHeight } = getDeviceTypeInfo();
 
@@ -48,6 +53,51 @@ export default class App extends Component {
                 <Switch>
                     <Route exact path="/">
                         <WelcomePage
+                            scrollPos={this.state.scrollPos}
+                            language={this.state.language}
+                            setLanguage={this.setLanguage}
+                            deviceType={this.state.deviceType}
+                            deviceOrientation={this.state.deviceOrientation}
+                        />
+                    </Route>
+                    <Route path="/pictures">
+                        <PicturesPage
+                            scrollPos={this.state.scrollPos}
+                            language={this.state.language}
+                            setLanguage={this.setLanguage}
+                            deviceType={this.state.deviceType}
+                            deviceOrientation={this.state.deviceOrientation}
+                        />
+                    </Route>
+                    <Route path="/fishing">
+                        <FishingPage
+                            scrollPos={this.state.scrollPos}
+                            language={this.state.language}
+                            setLanguage={this.setLanguage}
+                            deviceType={this.state.deviceType}
+                            deviceOrientation={this.state.deviceOrientation}
+                        />
+                    </Route>
+                    <Route path="/diving">
+                        <DivingPage
+                            scrollPos={this.state.scrollPos}
+                            language={this.state.language}
+                            setLanguage={this.setLanguage}
+                            deviceType={this.state.deviceType}
+                            deviceOrientation={this.state.deviceOrientation}
+                        />
+                    </Route>
+                    <Route path="/web">
+                        <WebPage
+                            scrollPos={this.state.scrollPos}
+                            language={this.state.language}
+                            setLanguage={this.setLanguage}
+                            deviceType={this.state.deviceType}
+                            deviceOrientation={this.state.deviceOrientation}
+                        />
+                    </Route>
+                    <Route path="/pro-dive-calculator">
+                        <ProDiveCalculator
                             scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}

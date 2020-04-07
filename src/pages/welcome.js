@@ -19,13 +19,6 @@ import Footer from '../components/navigation/footer';
 
 
 export default class Welcome extends Component{
-    //use nav Item with 
-    //<span style={styles.navigationPoint} id="navPoint1"/> 
-    // & navigationPoint:{
-    // position : "absolute",
-    // top: "50%",
-    // left: "50%",}
-    //in div to use the anchor and navigation animation
     navbarItem = {
         navPoint1 : {
             anchor :"intro",
@@ -179,8 +172,9 @@ export default class Welcome extends Component{
                     setLanguage={this.props.setLanguage}
                     deviceType={this.props.deviceType}
                     deviceOrientation={this.props.deviceOrientation}
+                    backToHome={false}
                 />
-                <Parallax background={IntroBackground} id="intro" orientation="column">
+                <Parallax background={IntroBackground} id="intro">
                     <span style={styles.navigationPoint} id="navPoint1"/>
                     <div style={styles.backBrand}>
                         <img src={ADBrand} alt="AD logo" style={styles.logoBrand}/>
@@ -201,7 +195,7 @@ export default class Welcome extends Component{
                         </blockquote>
                     </div>
                 </section>
-                <Parallax background={BlogBackground} id="blogs" orientation="column">
+                <Parallax background={BlogBackground} id="blogs">
                     <span style={styles.navigationPoint} id="navPoint3"/>
                     <div style={styles.blogDiv}>
                         <SectionCard

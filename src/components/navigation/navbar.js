@@ -4,6 +4,7 @@ import NavItem from './navitem';
 import FRFLAG from './../../img/Flag_of_France.svg';
 import ENFLAG from './../../img/Flag_of_the_United_Kingdom.svg';
 import LANGUAGE from './../../img/language.svg';
+import Home from './../../img/home.svg';
 
 export default class Navbar extends Component{
     state = {
@@ -73,20 +74,35 @@ export default class Navbar extends Component{
                 borderRadius: "50%",
             },
         }
-        let navList = Object.keys(this.props.elements).map(item => (
-            <NavItem 
-                anchor={this.props.elements[item].anchor}
-                navPoint={item}
-                name={this.props.elements[item].name}
-                icon={this.props.elements[item].icon}
-                language={this.props.language}
-                deviceType={this.props.deviceType}
-                deviceOrientation={this.props.deviceOrientation}
-            />
-        ))
+        if(this.props.elements){
+            var navList = Object.keys(this.props.elements).map(item => (
+                <NavItem 
+                    anchor={this.props.elements[item].anchor}
+                    navPoint={item}
+                    name={this.props.elements[item].name}
+                    icon={this.props.elements[item].icon}
+                    language={this.props.language}
+                    deviceType={this.props.deviceType}
+                    deviceOrientation={this.props.deviceOrientation}
+                />
+            ))
+        }
+        if(this.props.backToHome){
+            var backToHome = (
+                <NavItem 
+                    name={{fr : "Page d'accueil", en : "Home page"}}
+                    icon={{src : Home, alt : "home icon"}}
+                    language={this.props.language}
+                    deviceType={this.props.deviceType}
+                    deviceOrientation={this.props.deviceOrientation}
+                />
+            )
+        }
+        
         return(
             <Fragment>
             <nav style={styles.navBar}>
+                {backToHome}
                 {navList}
                 <div style={styles.langTab}>
                     <div style={styles.langGroup} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}>
@@ -111,4 +127,30 @@ Navbar.propTypes = {
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,
     deviceOrientation : PropTypes.string,
+    backToHome : PropTypes.bool,
 }
+
+Navbar.defaultProps = {
+    backToHome : true,
+}
+
+//use navbar with 
+    //<span style={styles.navigationPoint} id="navPoint1"/> 
+    // & navigationPoint:{
+    // position : "absolute",
+    // top: "50%",
+    // left: "50%",}
+    // & navbarItem = {
+    // navPoint1 : {
+    //     anchor :"id",
+    //     name:{
+    //         en:"name",
+    //         fr:"name",
+    //     },
+    //     icon:{
+    //         src:,
+    //         alt:" icon",
+    //     },
+    // },
+    // }
+    //in div to use the anchor and navigation animation

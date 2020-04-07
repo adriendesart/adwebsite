@@ -14,9 +14,11 @@ export default class NavItem extends Component{
         window.removeEventListener("scroll", this.handleScroll)
     }
     handleScroll = () =>{
-        this.setState({
-            visible: isVisible(this.props.navPoint) !== "unvisible"?true:false,
-        })
+        if(this.props.navPoint){
+            this.setState({
+                visible: isVisible(this.props.navPoint) !== "unvisible"?true:false,
+            })
+        }
     }
     handleOver =()=>{
         this.setState({
@@ -59,7 +61,7 @@ export default class NavItem extends Component{
 
         return(
             <div style={styles.navItem}>
-                <a style={styles.navLink} href={"#" + this.props.anchor} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}>
+                <a style={styles.navLink} href={this.props.anchor && "#" + this.props.anchor} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver}>
                     <span style={styles.subject}>{this.props.language==="en"?this.props.name.en:this.props.name.fr}</span>
                     <img style={styles.icon} src={this.props.icon.src} alt={this.props.icon.alt}/>
                 </a>
