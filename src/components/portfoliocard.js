@@ -19,15 +19,15 @@ export default class PortfolioCard extends Component{
         })
     }
     handleMore =()=>{
-        let oldOrder= {...this.state.order}
+        let oldOrder= { ...this.state}
         this.setState({
-            order: oldOrder+1,
+            order: oldOrder.order+1,
         })
     }
     handleLess =()=>{
-        let oldOrder= {...this.state.order}
+        let oldOrder= { ...this.state}
         this.setState({
-            order: oldOrder-1,
+            order: oldOrder.order-1,
         })
     }
     render(){
