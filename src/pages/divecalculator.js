@@ -79,7 +79,6 @@ export default class ProDiveCalculator extends Component{
 }
 
 ProDiveCalculator.propTypes ={
-    scrollPos : PropTypes.number,
     language : PropTypes.string,
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,

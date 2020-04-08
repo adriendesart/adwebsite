@@ -24,20 +24,12 @@ export default class App extends Component {
         deviceOrientation,
         screenWidth, 
         screenHeight,
-        scrollPos: null,
     }
     componentDidMount() {
-        window.addEventListener("scroll", this.handleScroll);
         window.addEventListener("resize", this.handleResize, false);
     };
     componentWillUnmount() {
-        window.removeEventListener("scroll", this.handleScroll);
         window.removeEventListener("resize", this.handleResize, false);
-    };
-    handleScroll = () =>{
-        this.setState({
-            scrollPos: document.body.getBoundingClientRect().top
-        });
     };
     handleResize = () => {
         const { deviceType, deviceOrientation, screenWidth, screenHeight } = getDeviceTypeInfo();
@@ -53,7 +45,6 @@ export default class App extends Component {
                 <Switch>
                     <Route exact path="/">
                         <WelcomePage
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
@@ -62,7 +53,6 @@ export default class App extends Component {
                     </Route>
                     <Route path="/pictures">
                         <PicturesPage
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
@@ -71,7 +61,6 @@ export default class App extends Component {
                     </Route>
                     <Route path="/fishing">
                         <FishingPage
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
@@ -80,7 +69,6 @@ export default class App extends Component {
                     </Route>
                     <Route path="/diving">
                         <DivingPage
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
@@ -89,7 +77,6 @@ export default class App extends Component {
                     </Route>
                     <Route path="/web">
                         <WebPage
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}
@@ -98,7 +85,6 @@ export default class App extends Component {
                     </Route>
                     <Route path="/pro-dive-calculator">
                         <ProDiveCalculator
-                            scrollPos={this.state.scrollPos}
                             language={this.state.language}
                             setLanguage={this.setLanguage}
                             deviceType={this.state.deviceType}

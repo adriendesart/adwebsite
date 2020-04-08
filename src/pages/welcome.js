@@ -162,8 +162,6 @@ export default class Welcome extends Component{
                 }
             }`;
 
-        let copyright = !(this.props.scrollPos < -1) && <span style={styles.copyright}>&copy; Adrien Desart - 2020</span>
-
         return(
             <Fragment>
                 <Navbar
@@ -187,7 +185,6 @@ export default class Welcome extends Component{
                 </Parallax>
                 <section id="about" style={styles.aboutSection}>
                     <span style={styles.navigationPoint} id="navPoint2"/>
-                    {this.props.deviceType!=="Mobile" && copyright}
                     <div style={styles.block}>
                         <img src={PortraitAD} alt="Adrien Desart portrait" style={styles.profilePicture}/>
                         <blockquote style={styles.aboutDescription}> {this.props.language==="en"?"I'm Adrien. I work as commercial diver for the Puclic Service of Wallonia and also as freelance web developer. My passions are scuba diving, streetfishing, wed developpement and take pictures. This site would share about my work, my ideas and my project. I hope you will enjoy."
@@ -245,7 +242,6 @@ export default class Welcome extends Component{
 }
 
 Welcome.propTypes = {
-    scrollPos : PropTypes.number,
     language : PropTypes.string,
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,

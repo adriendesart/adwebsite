@@ -48,7 +48,6 @@ export default class FishingPage extends Component{
 }
 
 FishingPage.propTypes ={
-    scrollPos : PropTypes.number,
     language : PropTypes.string,
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,

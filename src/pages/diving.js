@@ -48,7 +48,6 @@ export default class DivingPage extends Component{
 }
 
 DivingPage.propTypes ={
-    scrollPos : PropTypes.number,
     language : PropTypes.string,
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,

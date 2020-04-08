@@ -48,7 +48,6 @@ export default class WebPage extends Component{
 }
 
 WebPage.propTypes ={
-    scrollPos : PropTypes.number,
     language : PropTypes.string,
     setLanguage : PropTypes.func,
     deviceType : PropTypes.string,

@@ -63,8 +63,8 @@ export default class SectionCard extends Component{
             return <Redirect push to={`/${this.props.redirect}`}/>
         }
         return(
-            <div style={styles.card} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} onClick={this.props.deviceType !=="Mobile" && this.handleClick}>
-                <section style={styles.movingSection} onClick={this.props.deviceType ==="Mobile" && this.handleClick}>
+            <div style={styles.card} onMouseEnter={this.handleOver} onMouseLeave={this.handleOver} onClick={this.props.deviceType !=="Mobile"?this.handleClick:undefined}>
+                <section style={styles.movingSection} onClick={this.props.deviceType ==="Mobile"?this.handleClick:undefined}>
                     <h2 style={styles.title}>{this.props.language === "fr"?this.props.title.fr:this.props.title.en}</h2>
                     <p style={styles.description}>{this.props.language === "fr"?this.props.description.fr:this.props.description.en}</p>
                 </section>
