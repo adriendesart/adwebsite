@@ -82,6 +82,7 @@ export default class PicturesPage extends Component{
                 maxWidth : this.props.deviceType === "Mobile"?"100vw":"80vw",
                 maxHeight : this.props.deviceType === "Mobile"?"100vh":"80vh",
                 overflow : "hidden",
+                position :"relative",
             },
             photoCarousel :{
                 maxWidth : "80%",
@@ -95,6 +96,7 @@ export default class PicturesPage extends Component{
                 justifyContent: "space-around",
                 alignItems: "center",
                 padding : "3rem",
+                position :"relative",
             }
         }
         if(this.photos){

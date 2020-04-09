@@ -57,6 +57,7 @@ export default class SectionCard extends Component{
                 margin : "0",
                 padding : "0",
                 maxHeight : "50%",
+                textAlign : "center",
             },
         }
         if(this.state.clicked){

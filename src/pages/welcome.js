@@ -229,7 +229,7 @@ export default class Welcome extends Component{
                             deviceType={this.props.deviceType}
                             deviceOrientation={this.props.deviceOrientation}
                             title={{fr : "Portfolio", en : "Gallery"}}
-                            description={{fr : "En construction", en : "Wait for it"}}
+                            description={{fr : "Cliquez pour découvrir mes albums photos, toutes catégories confondues.", en : "Discover all my photo albums, all categories combined."}}
                             background={Picture}
                             redirect="pictures"
                         />
