@@ -1,4 +1,3 @@
-//Onclick : Ouvrir un diaporama/modal
 import React, { Component, Fragment } from "react";
 import PropTypes from 'prop-types';
 
@@ -33,16 +32,17 @@ export default class PortfolioCard extends Component{
     render(){
         let styles ={
             card :{
-                width : this.props.deviceType === "Mobile"?"80vw":"20vw",
-                height : this.props.deviceType === "Mobile"?"80vw":"40vh",
-                maxWidth : this.props.deviceType === "Mobile"?"80vw":"20vw",
-                maxHeight : this.props.deviceType === "Mobile"?"80vw":"40vh",
+                width : this.props.deviceType === "Mobile"?"60vw":"20vw",
+                height : this.props.deviceType === "Mobile"?"80vh":"40vh",
+                maxWidth : this.props.deviceType === "Mobile"?"60vw":"20vw",
+                maxHeight : this.props.deviceType === "Mobile"?"80vh":"40vh",
                 padding : "0.5rem",
                 border: "1px solid black",
                 borderRadius : "1rem",
                 backgroundColor : "white",
                 overflow : "hidden",
                 boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 20.2), 0 6px 20px 0 rgba(0, 0, 0, 20.19)",
+                margin : "0.5rem",
             },
             content :{
                 display: "flex",
@@ -64,6 +64,7 @@ export default class PortfolioCard extends Component{
             description :{
                 margin : "0",
                 padding : "0.5rem",
+                textAlign : "center",
             },
             modal :{
                 position: "fixed",
@@ -74,6 +75,10 @@ export default class PortfolioCard extends Component{
                 height: "100vh",
                 overflow: "auto",
                 backgroundColor: "rgba(0,0,0,0.9)",
+                display: "flex",
+                flexFlow:"column nowrap",
+                justifyContent: "center",
+                alignItems: "center",
             },
             closeBtn :{
                 textDecoration : "none",
@@ -86,16 +91,51 @@ export default class PortfolioCard extends Component{
                 fontSize: "4rem",
                 fontWeight: "bold",
             },
+            moreBtn :{
+                textDecoration : "none",
+                backgroundColor: "transparent",
+                border: "none",
+                position: "absolute",
+                top: "auto",
+                right: "2rem",
+                color: "#f1f1f1",
+                fontSize: "4rem",
+                fontWeight: "bold",
+            },
+            lessBtn :{
+                textDecoration : "none",
+                backgroundColor: "transparent",
+                border: "none",
+                position: "absolute",
+                top: "auto",
+                left: "2rem",
+                color: "#f1f1f1",
+                fontSize: "4rem",
+                fontWeight: "bold",
+            },
+            photoGallery :{
+                maxWidth : "80%",
+                maxHeight : "80%",
+            },
+            count :{
+                position: "absolute",
+                top: "80%",
+                left: "auto",
+                color: "#f1f1f1",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+            }
         }
         if(this.state.clicked){
             var modal = (
                 <div style={styles.modal}> 
                     <button style={styles.closeBtn} onClick={this.handleClicked}>&times;</button>
-                    {this.state.order<this.props.photos.pictures.length && 
+                    {this.state.order<this.props.photos.length && 
                     <button style={styles.moreBtn} onClick={this.handleMore}>&gt;</button>}
                     {this.state.order>1 &&
                     <button style={styles.lessBtn} onClick={this.handleLess}>&lt;</button>}
-                    <span>{this.state.order}/{this.props.photos.pictures.length}</span>
+                    <img style={styles.photoGallery} src={this.props.photos[this.state.order - 1].src} alt={this.props.photos[this.state.order - 1].alt}/>
+                    <span style={styles.count}>{this.state.order}/{this.props.photos.length}</span>
                 </div>
             )
         }
@@ -118,9 +158,10 @@ export default class PortfolioCard extends Component{
 PortfolioCard.propTypes = {
     language : PropTypes.string,
     category : PropTypes.array,
-    img : PropTypes.string,
+    img : PropTypes.object,
     title : PropTypes.object,
     description : PropTypes.object,
     date : PropTypes.string,
-    photos : PropTypes.object,
+    photos : PropTypes.array,
+    deviceType :PropTypes.string,
 }

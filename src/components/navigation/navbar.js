@@ -4,7 +4,7 @@ import NavItem from './navitem';
 import FRFLAG from './../../img/Flag_of_France.svg';
 import ENFLAG from './../../img/Flag_of_the_United_Kingdom.svg';
 import LANGUAGE from './../../img/language.svg';
-import Home from './../../img/home.svg';
+import Home from './../../img/reply.svg';
 
 export default class Navbar extends Component{
     state = {
