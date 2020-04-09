@@ -102,6 +102,7 @@ export default class PicturesPage extends Component{
         if(this.photos){
             var gallery = this.photos.map(item => (
                 <PortfolioCard
+                    key={item.title.en.replace(" ","")}
                     language={this.props.language}
                     category={item.category}
                     img={item.pictures[0]}

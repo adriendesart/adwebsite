@@ -77,6 +77,7 @@ export default class Navbar extends Component{
         if(this.props.elements){
             var navList = Object.keys(this.props.elements).map(item => (
                 <NavItem 
+                    key={this.props.elements[item].anchor}
                     anchor={this.props.elements[item].anchor}
                     navPoint={item}
                     name={this.props.elements[item].name}

@@ -26,63 +26,6 @@ import A0021 from './../photos/A0021.JPG'
 export const Photos = [
     {
         title : {
-            fr : "Sambre Noir",
-            en : "Black Sambre",
-        },
-        description : {
-            fr : "Balade au fil de la Sambre Carolo",
-            en : "Stroll along the Carolo's Sambre",
-        },
-        category : ["landscape"],
-        date : "18/01/2020",
-        pictures : [
-            {
-                src : A0001,
-                alt: "Des promeneurs au bord de l'eau"
-            },
-            {
-                src : A0002,
-                alt: "Les anciennes usines"
-            },
-            {
-                src : A0003,
-                alt: "Un canard"
-            },
-        ],
-    },
-    {
-        title : {
-            fr : "Dame Lune",
-            en : "Miss Moon",
-        },
-        description : {
-            fr : "Soir de lune \"rose\"",
-            en : "Night of the \"pink\" moon",
-        },
-        category : ["nature","landscape"],
-        date : "07/04/2020",
-        pictures : [
-            
-            {
-                src : A0018,
-                alt: ""
-            },
-            {
-                src : A0019,
-                alt: ""
-            },
-            {
-                src : A0020,
-                alt: ""
-            },
-            {
-                src : A0021,
-                alt: ""
-            },
-        ],
-    },
-    {
-        title : {
             fr : "Animaux du jardin",
             en : "Garden animals",
         },
@@ -148,6 +91,63 @@ export const Photos = [
             {
                 src : A0017,
                 alt: ""
+            },
+        ],
+    },
+    {
+        title : {
+            fr : "Dame Lune",
+            en : "Miss Moon",
+        },
+        description : {
+            fr : "Soir de lune \"rose\"",
+            en : "Night of the \"pink\" moon",
+        },
+        category : ["nature","landscape"],
+        date : "07/04/2020",
+        pictures : [
+            
+            {
+                src : A0018,
+                alt: ""
+            },
+            {
+                src : A0019,
+                alt: ""
+            },
+            {
+                src : A0020,
+                alt: ""
+            },
+            {
+                src : A0021,
+                alt: ""
+            },
+        ],
+    },
+    {
+        title : {
+            fr : "Sambre Noir",
+            en : "Black Sambre",
+        },
+        description : {
+            fr : "Balade au fil de la Sambre Carolo",
+            en : "Stroll along the Carolo's Sambre",
+        },
+        category : ["landscape"],
+        date : "18/01/2020",
+        pictures : [
+            {
+                src : A0001,
+                alt: "Des promeneurs au bord de l'eau"
+            },
+            {
+                src : A0002,
+                alt: "Les anciennes usines"
+            },
+            {
+                src : A0003,
+                alt: "Un canard"
             },
         ],
     },
