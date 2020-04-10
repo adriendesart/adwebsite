@@ -4,6 +4,7 @@ import Footer from "../components/navigation/footer";
 import Navbar from "../components/navigation/navbar";
 import Parallax from "../components/parallax";
 import Woodboard from './../img/woodboard.jpg';
+import Title from './../components/page/title';
 
 export default class WebPage extends Component{
     navbarItem = {
@@ -37,6 +38,11 @@ export default class WebPage extends Component{
                     deviceOrientation={this.props.deviceOrientation}
                 />
                 <Parallax background={Woodboard}>
+                    <Title
+                        deviceType={this.props.deviceType}
+                        language={this.props.language}
+                        title={{fr : "Code",en : "Coding"}}
+                    />
                     <section id="intro">
                         <span style={styles.navigationPoint} id="navPoint1"/>
                     </section>

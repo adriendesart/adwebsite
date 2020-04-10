@@ -219,7 +219,7 @@ export default class Welcome extends Component{
                             language={this.props.language}
                             deviceType={this.props.deviceType}
                             deviceOrientation={this.props.deviceOrientation}
-                            title={{fr : "Code", en : "Web Dev"}}
+                            title={{fr : "Code", en : "Coding"}}
                             description={{fr : "En construction", en : "Wait for it"}}
                             background={Webdev}
                             redirect="web"

@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import {getDeviceTypeInfo} from './utils/responsive';
 import {getBrowserLanguage} from './utils/browserLang';
+import ScrollToTop from '../src/utils/scrolltotop';
 import WelcomePage from './pages/welcome';
 import NotFound from './pages/error404';
 import ProDiveCalculator from './pages/divecalculator';
@@ -42,6 +43,7 @@ export default class App extends Component {
     render(){
         return(
             <Router>
+                <ScrollToTop/>
                 <Switch>
                     <Route exact path="/">
                         <WelcomePage

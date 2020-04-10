@@ -9,6 +9,7 @@ import {Photos} from './../photos/photos';
 import PortfolioCard from "../components/portfoliocard";
 import Gallery from "./../img/th.svg";
 import Carousel from "./../img/eye.svg";
+import Title from "../components/page/title";
 
 export default class PicturesPage extends Component{
     state ={
@@ -58,14 +59,6 @@ export default class PicturesPage extends Component{
     }
     render(){
         let styles = {
-            title :{
-                width : "100%",
-                textAlign : "center",
-                fontSize : this.props.deviceType==="Mobile"?"2rem":"4rem",
-                backgroundColor :"white",
-                opacity : "0.75",
-                margin : "0",
-            },
             navigationPoint:{
                 position : "absolute",
                 top: "50%",
@@ -77,8 +70,6 @@ export default class PicturesPage extends Component{
                 flexFlow:"row wrap",
                 justifyContent: "center",
                 alignItems: "center",
-                // width : this.props.deviceType === "Mobile"?"60vw":"80vw",
-                // height : this.props.deviceType === "Mobile"?"80vw":"80vh",
                 maxWidth : this.props.deviceType === "Mobile"?"100vw":"80vw",
                 maxHeight : this.props.deviceType === "Mobile"?"100vh":"80vh",
                 overflow : "hidden",
@@ -125,7 +116,11 @@ export default class PicturesPage extends Component{
                     deviceOrientation={this.props.deviceOrientation}
                 />
                 <Parallax background={Woodboard}>
-                    <h1 style={styles.title}>{this.props.language==="fr"?"Portfolio":"Gallery"}</h1>
+                    <Title
+                        deviceType={this.props.deviceType}
+                        language={this.props.language}
+                        title={{fr : "Portfolio",en : "Gallery"}}
+                    />
                     <section style={styles.carousel} id="intro">
                         <span style={styles.navigationPoint} id="navPoint1"/>
                         <img style={styles.photoCarousel} src={this.photos[this.state.carouselImage[0]].pictures[this.state.carouselImage[1]].src} alt={this.photos[this.state.carouselImage[0]].pictures[this.state.carouselImage[1]].alt}/>
